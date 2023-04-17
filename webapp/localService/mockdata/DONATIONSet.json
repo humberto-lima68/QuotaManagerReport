@@ -1,0 +1,64 @@
+[{
+	"Zchave": "202303235560910",
+	"Kunnr": "1000005913",
+	"ZunnrDoador": "1000001476",
+	"Znumber": "1",
+	"ZzbrAtppkt": "1",
+	"ZzbrAtpskp": "CP 141 PL14",
+	"Zgcdoador": "676",
+	"Uom": "TO",
+	"Zqtddoada": 10,
+	"Status": "Partial",
+	"Zusrexec": "HUMBEL01",
+	"Zdtexec": "27.03.2023",
+	"Zhexec": "16:11:12",
+	"__metadata": {
+		"uri": "DONATIONSet(Zchave='Zchave%203',Kunnr='Kunnr%203',ZunnrDoador='ZunnrDoador%203',Znumber='Znumber%203')",
+		"type": "ZGW_QUOTAMANAGER_SRV.DONATION"
+	},
+	"KunnrName": "ACTIVAS PLASTICOS INDUSTRIAIS LTDA",
+	"ZunnrDoadorName": "FORTYMIL INDUSTRIA DE PLASTICOS",
+	"ZgcdoadorName": "ANTONIO LUIS ACETOZE"
+}, {
+	"Zchave": "202303235560910",
+	"Kunnr": "1000005913",
+	"ZunnrDoador": "1000004980",
+	"Znumber": "2",
+	"ZzbrAtppkt": "4",
+	"ZzbrAtpskp": "CP 141 PL14",
+	"Zgcdoador": "891",
+	"Uom": "TO",
+	"Zqtddoada": 30,
+	"Status": "Total",
+	"Zusrexec": "HUMBEL01",
+	"Zdtexec": "27.03.2023",
+	"Zhexec": "16:26:30",
+	"__metadata": {
+		"uri": "DONATIONSet(Zchave='Zchave%204',Kunnr='Kunnr%204',ZunnrDoador='ZunnrDoador%204',Znumber='Znumber%204')",
+		"type": "ZGW_QUOTAMANAGER_SRV.DONATION"
+	},
+	"KunnrName": "ACTIVAS PLASTICOS INDUSTRIAIS LTDA",
+	"ZunnrDoadorName": "M.H.C. PLASTICOS LTDA.",
+	"ZgcdoadorName": "MARCO ANTONIO BOIX DO NASCIMENTO"
+}, {
+	"Zchave": "202303235600350",
+	"Kunnr": "1000005913",
+	"ZunnrDoador": "1000001476",
+	"Znumber": "1",
+	"ZzbrAtppkt": "1",
+	"ZzbrAtpskp": "CP 141 PL14",
+	"Zgcdoador": "676",
+	"Uom": "UTO",
+	"Zqtddoada": 10,
+	"Status": "Partial",
+	"Zusrexec": "HUMBEL01",
+	"Zdtexec": "24.03.2023",
+	"Zhexec": "11:26:58",
+	"__metadata": {
+		"uri": "DONATIONSet(Zchave='Zchave%205',Kunnr='Kunnr%205',ZunnrDoador='ZunnrDoador%205',Znumber='Znumber%205')",
+		"type": "ZGW_QUOTAMANAGER_SRV.DONATION"
+	},
+	"KunnrName": "ACTIVAS PLASTICOS INDUSTRIAIS LTDA",
+	"ZunnrDoadorName": "FORTYMIL INDUSTRIA DE PLASTICOS",
+	"ZgcdoadorName": "ANTONIO LUIS ACETOZE"
+}]

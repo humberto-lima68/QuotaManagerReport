@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZGW_QUOTAMANAGER_SRV" xml:lang="pt" sap:schema-version="1">
+			<Annotation xmlns="http://docs.oasis-open.org/odata/ns/edm" Term="Core.SchemaVersion" String="1.0.0"/>
+			<EntityType Name="SALESORDER" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Zchave"/>
+					<PropertyRef Name="ZzbrAtpskp"/>
+					<PropertyRef Name="Kunnr"/>
+					<PropertyRef Name="Kunn2"/>
+				</Key>
+				<Property Name="Zchave" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Key number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="ZzbrAtpskp" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Planning SKU"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Client Code" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Kunn2" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Account Manager" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="ZzbrAtppkt" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Pocket"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Material" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Meins" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="UOM" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+				<Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales Order" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Auart" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Document Type" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Mmsta" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Plant-Specific Material Status"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Spart" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Activity Sector"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="QtOrdem" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Order Quantity"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="QtFalta" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Pending Quantity"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="truee"/>
+				<Property Name="QtAtendida" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity Served"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="BrFcst" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Sales Plan"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="BrConsq" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Consumed quota"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="BrQuota" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Full Quota"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Wadat" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Goods Issue"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Criado por" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Name1" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Client Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zdat" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Created in" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Ztime" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zdatchg" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Change Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Ztimechg" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Change Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zusrchg" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Change User" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+			</EntityType>
+			<EntityType Name="REQUEST" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Zchave"/>
+					<PropertyRef Name="Zgcdoador"/>
+				</Key>
+				<Property Name="Zchave" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Key Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zgcdoador" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Donor Manager" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="ZgcdoadorName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Donor Manager Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>	
+				<Property Name="ZzbrAtpskp" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Planning SKU"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Kunn2" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Requesting account manager"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Kunn2Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Requesting account manager Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>	
+				<Property Name="Uom" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Uon"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="BrQtdsolicitada" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false"
+					sap:label="Quantidade Solicitada" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zqtddoada" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Amount Donated"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zusrsolicitacao" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Requesting user"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zdtsolicitacao" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Request Date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Ztmsolicitacao" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Request Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="DONATION" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Zchave"/>
+					<PropertyRef Name="Kunnr"/>
+					<PropertyRef Name="ZunnrDoador"/>
+					<PropertyRef Name="Znumber"/>
+				</Key>
+				<Property Name="Zchave" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Key Number"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Requesting Customer Code"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="ture"/>
+				<Property Name="KunnrName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Requesting Customer Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="ture"/>
+				<Property Name="ZunnrDoador" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Donor Client"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="ZunnrDoadorName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Donor Client Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Znumber" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sequence" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="ZzbrAtppkt" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Pocket" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ZzbrAtpskp" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Planning SKU"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zgcdoador" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Donor Account Manager Code" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ZgcdoadorName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Donor Account Manager Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Uom" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Uon"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zqtddoada" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity Donated"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Status" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zusrexec" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zdtexec" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Execution Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Zhexec" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Execution Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="zapo_acesso" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Zusergc"/>
+					<PropertyRef Name="Zusersubst"/>
+				</Key>
+				<Property Name="Zusergc" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zusersubst" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zdtinicio" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zdtfim" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Znomegc" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Znomesubst" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zzsearch" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Char80" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+				<Property Name="Zacesso" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="true"/>
+			</EntityType>
+			<EntityContainer Name="ZGW_QUOTAMANAGER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="SALESORDERSet" EntityType="ZGW_QUOTAMANAGER_SRV.SALESORDER" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="REQUESTSet" EntityType="ZGW_QUOTAMANAGER_SRV.REQUEST" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="DONATIONSet" EntityType="ZGW_QUOTAMANAGER_SRV.DONATION" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:content-version="1"/>
+				<EntitySet Name="zapo_acessoSet" EntityType="ZGW_QUOTAMANAGER_SRV.zapo_acesso" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+			</EntityContainer>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="http://D2-LV616-APP:8000/sap/opu/odata/sap/ZGW_QUOTAMANAGER_SRV/$metadata"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="http://D2-LV616-APP:8000/sap/opu/odata/sap/ZGW_QUOTAMANAGER_SRV/$metadata"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

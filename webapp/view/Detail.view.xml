@@ -1,0 +1,191 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:semantic="sap.m.semantic"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable" xmlns:table="sap.ui.table"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="exed.com.quotamanager_report.controller.Detail">
+	<semantic:MasterPage id="page" title="{i18n>MaterPageTitle}" navButtonPress="onNavBack" showNavButton="true">
+		<semantic:content>
+			<Panel xmlns="sap.m" width="auto" id="panel1" expandable="true" class="sapUiResponsiveMargin" expanded="false"
+				app:w5g.dt.context="/SALESORDERSet">
+				<headerToolbar>
+					<Toolbar id="toolbar3">
+						<Title id="_IDEGen_title0" text=" Quota Manager - Sales Order without quota"/>
+						<ToolbarSpacer id="_IDEGen_toolbarspacer0"/>
+						<!--<Button id="_IDEGen_button0" icon="sap-icon://settings"/>-->
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<!--<MultiInput id="multipleConditions" valueHelpOnly="true" placeholder="Sales Order" width="100%" valueHelpRequest=".onMultipleConditionsVHRequested"/>-->
+					<SearchField id="searchField1" showSearchButton="true" tooltip="Client Code" search=".onSearchKunnr" width="100%" placeholder="Client Code"/>
+					<SearchField id="searchField2" tooltip="Client Name" search=".onSearchKunnrName" width="100%" placeholder="Client Name"/>
+					<SearchField id="searchField" tooltip="Sales Order" search=".onSearch" width="100%" placeholder="Sales Order"/>
+					<SearchField id="searchField3" tooltip="Planning SKU" search=".onSearchSKU" width="100%" placeholder="Planning SKU"/>
+					<Table id="list" autoPopinMode="true" contextualWidth="Auto" popinChanged=".onPopinChanged"
+						items="{ path: '/SALESORDERSet', sorter: { path: 'Vbeln' } }">
+						<columns>
+							<Column width="17em" importance="High">
+								<Text text="Clent"/>
+							</Column>
+							<Column width="6em" importance="None">
+								<Text text="Sales Order"/>
+							</Column>
+							<Column width="6em" importance="None">
+								<Text text="Planning SKU"/>
+							</Column>
+							<Column width="5em" importance="None">
+								<Text text="Order Quantity"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance="None">
+								<Text text="Quantity Served"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance="Medium">
+								<Text text="Pending Quantity"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance=" High">
+								<Text text="Status"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<ObjectIdentifier title="{Kunnr}" text="{Name1}"/>
+									<Text text="{Vbeln}"/>
+									<Text text="{ZzbrAtpskp}"/>
+									<ObjectNumber number="{ parts:[{path:'QtOrdem'}], formatter: '.formatter.currencyValue'}"/>
+									<ObjectNumber number="{parts:[{path:'QtAtendida'}], formatter: '.formatter.currencyValue'}"/>
+									<ObjectNumber number="{parts:[{path:'QtFalta'}], formatter: '.formatter.currencyValue'}"/>
+									<ObjectStatus text="{Status}" icon="{ parts: [ {path: 'Status'}], formatter: '.formatter.chgIcon' }"
+										state="{ parts: [ {path: 'Status'}], formatter: '.formatter.chgState' }"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Panel>
+			<Panel expandable="true" width="auto" class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<OverflowToolbar style="Clear">
+						<Title text="Quota Manager - Requested"/>
+						<ToolbarSpacer/>
+						<!--<Button icon="sap-icon://settings"/>-->
+						<!--<Button icon="sap-icon://drop-down-list"/>-->
+					</OverflowToolbar>
+				</headerToolbar>
+				<content>
+					<!--<MultiInput id="multipleConditions" valueHelpOnly="true" placeholder="Sales Order" width="100%" valueHelpRequest=".onMultipleConditionsVHRequested"/>-->
+					<SearchField id="searchField5" showSearchButton="true" tooltip="Requesting account Manager Name" search=".onSearchKunn2Name" width="100%"
+						placeholder="Requesting account manager Name"/>
+					<SearchField id="searchField6" showSearchButton="true" tooltip="Donor Manager Name" search=".onSearchGcdoadorName" width="100%"
+						placeholder="Donor Manager Name"/>
+					<SearchField id="searchField7" tooltip="Planning SKU" search=".onSearchPlanningSKU1" width="100%" placeholder="Planning SKU"/>
+					<Table id="list1" autoPopinMode="true" contextualWidth="Auto" popinChanged=".onPopinChanged"
+						items="{ path: '/REQUESTSet', sorter: { path: 'Zgcdoador' } }">
+						<columns>
+							<Column width="16em" importance="None">
+								<Text text="Requesting account manager"/>
+							</Column>
+							<Column width="7em" importance="None">
+								<Text text="Planning SKU"/>
+							</Column>
+							<Column width="6em" importance="None">
+								<Text text="Quantity Requested"/>
+							</Column>
+							<Column width="14em" importance="Medium">
+								<Text text="Donor Manager Name Code"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance="Medium">
+								<Text text="Amount Donated"/>
+							</Column>
+							<Column width="3em" hAlign="Center" importance="Medium">
+								<Text text="Uom"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance=" High">
+								<Text text="Status"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<ObjectIdentifier title="{Kunn2}" text="{Kunn2Name}"/>
+									<Text text="{ZzbrAtpskp}"/>
+									<ObjectNumber number="{ parts:[{path:'BrQtdsolicitada'}], formatter: '.formatter.currencyValue'}"/>
+									<ObjectIdentifier title="{Zgcdoador}" text="{ZgcdoadorName}"/>
+									<ObjectNumber number="{parts:[{path:'Zqtddoada'}], formatter: '.formatter.currencyValue'}"/>
+									<Text text="{Uom}"/>
+									<ObjectStatus text="{Status}" icon="{ parts: [ {path: 'Status'}], formatter: '.formatter.chgIcon' }"
+										state="{ parts: [ {path: 'Status'}], formatter: '.formatter.chgState' }"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Panel>
+			<Panel id="expandablePanel3" expandable="true" width="auto" class="sapUiResponsiveMargin">
+				<headerToolbar>
+					<OverflowToolbar active="true" press="onOverflowToolbarPress">
+						<Title text="Quota Manager - Approval"/>
+						<ToolbarSpacer/>
+						<!--<Button icon="sap-icon://settings"/>-->
+						<!--<Button icon="sap-icon://drop-down-list"/>-->
+					</OverflowToolbar>
+				</headerToolbar>
+				<content>
+					<!--<smartFilterBar:SmartFilterBar id="smartFilterBar3" entitySet="DONATIONSet">-->
+					<!--	<smartFilterBar:controlConfiguration>-->
+					<!--		<smartFilterBar:ControlConfiguration key="ZunnrDoadorName" visibleInAdvancedArea="true"/>-->
+					<!--		<smartFilterBar:ControlConfiguration key="KunnrName" visibleInAdvancedArea="true"/>-->
+					<!--	</smartFilterBar:controlConfiguration>-->
+					<!--</smartFilterBar:SmartFilterBar>-->
+					<!--<smartTable:SmartTable id="idSmartTable3" entitySet="DONATIONSet" smartFilterId="smartFilterBar3" tableType="ResponsiveTable"-->
+					<!--	useExportToExcel="false" beforeExport="onBeforeExport" useVariantManagement="false" enableAutoColumnWidth="true"-->
+					<!--	useTablePersonalisation="true" header="Line Items" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored"-->
+					<!--	enableAutoBinding="true" demandPopin="true" class="sapUiResponsiveContentPadding" showDetailsButton="true" detailsButtonSetting="Medium,Low"-->
+					<!--	initiallyVisibleFields="Kunnr,KunnrName,ZunnrDoador,ZummrDoadorName,Znumber,ZzbrAtpskp,Zgcdoador,ZgcdoadorName,Zqtddoada,Status"/>-->
+					<!--<SearchField id="searchField5" showSearchButton="true" tooltip="Requesting account Manager Name" search=".onSearchKunn2Name" width="100%"-->
+					<!--	placeholder="Requesting account manager Name"/>-->
+					<!--<SearchField id="searchField6" showSearchButton="true" tooltip="Donor Manager Name" search=".onSearchGcdoadorName" width="100%"-->
+					<!--	placeholder="Donor Manager Name"/>-->
+					<!--<SearchField id="searchField7" tooltip="Planning SKU" search=".onSearchPlanningSKU1" width="100%" placeholder="Planning SKU"/>-->
+				<SearchField id="searchField8" showSearchButton="true" tooltip="Donor Client Name" search=".onSearchKunnrDoadorName3" width="100%"
+						placeholder="Donor Client Name"/>
+					<SearchField id="searchField9" showSearchButton="true" tooltip="Requesting Customer" search=".onSearchKunnrName3" width="100%"
+						placeholder="Requesting Customer"/>
+					<Table id="list3" autoPopinMode="true" contextualWidth="Auto" popinChanged=".onPopinChanged"
+						items="{ path: '/DONATIONSet', sorter: { path: 'Zgcdoador' } }">
+						<columns>
+							<Column width="16em" importance="None">
+								<Text text="Requesting Customer "/>
+							</Column>
+							<Column width="16em" importance="None">
+								<Text text="Donor Client Name"/>
+							</Column>
+							<Column width="7em" importance="None">
+								<Text text="Planning SKU"/>
+							</Column>
+							<Column width="14em" importance="Medium">
+								<Text text="Donor Manager Name Code"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance="Medium">
+								<Text text="Amount Donated"/>
+							</Column>
+							<Column width="5em" hAlign="Center" importance=" High">
+								<Text text="Status"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle">
+								<cells>
+									<ObjectIdentifier title="{Kunnr}" text="{KunnrName}"/>
+									<ObjectIdentifier title="{ZunnrDoador}" text="{ZunnrDoadorName}"/>
+									<Text text="{ZzbrAtpskp}"/>
+									<ObjectIdentifier title="{Zgcdoador}" text="{ZgcdoadorName}"/>
+									<ObjectNumber number="{ parts:[{path:'Zqtddoada'}], formatter: '.formatter.currencyValue'}"/>
+									<ObjectStatus text="{Status}" icon="{ parts: [ {path: 'Status'}], formatter: '.formatter.chgIcon' }"
+										state="{ parts: [ {path: 'Status'}], formatter: '.formatter.chgState' }"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Panel>
+		</semantic:content>
+	</semantic:MasterPage>
+</mvc:View>

@@ -1,0 +1,109 @@
+[{
+	"Zchave": "202303140524180",
+	"Zgcdoador": "891",
+	"ZzbrAtpskp": "CP 141 PL14 ",
+	"Kunn2": "676",
+	"Uom": "TO ",
+	"BrQtdsolicitada": 30,
+	"Zqtddoada": 0,
+	"Status": "Rejected",
+	"Zusrsolicitacao": "HUMBEL01       ",
+	"Zdtsolicitacao": "14.03.2023    ",
+	"Ztmsolicitacao": "20:18:04",
+	"__metadata": {
+		"uri": "REQUESTSet(Zchave='Zchave%201',Zgcdoador='Zgcdoador%201')",
+		"type": "ZGW_QUOTAMANAGER_SRV.REQUEST"
+	},
+	"ZgcdoadorName": "MARCO ANTONIO BOIX DO NASCIMENTO",
+	"Kunn2Name": "ANTONIO LUIS ACETOZE"
+}, {
+	"Zchave": "202303141018670",
+	"Zgcdoador": "1456",
+	"ZzbrAtpskp": "CP 141 PL14 ",
+	"Kunn2": "676",
+	"Uom": "TO ",
+	"BrQtdsolicitada": 15,
+	"Zqtddoada": 0,
+	"Status": "Requested",
+	"Zusrsolicitacao": "HUMBEL01       ",
+	"Zdtsolicitacao": "14.03.2023    ",
+	"Ztmsolicitacao": "20:18:04",
+	"__metadata": {
+		"uri": "REQUESTSet(Zchave='Zchave%202',Zgcdoador='Zgcdoador%202')",
+		"type": "ZGW_QUOTAMANAGER_SRV.REQUEST"
+	},
+	"ZgcdoadorName": "HEITOR SILVEIRA NETTO TRENTIN",
+	"Kunn2Name": "ANTONIO LUIS ACETOZE"
+}, {
+	"Zchave": "202303225307590",
+	"Zgcdoador": "891",
+	"ZzbrAtpskp": "HP 500D PL14",
+	"Kunn2": "676",
+	"Uom": "TO ",
+	"BrQtdsolicitada": 2475,
+	"Zqtddoada": 0,
+	"Status": "Requested",
+	"Zusrsolicitacao": "GUSTAA15       ",
+	"Zdtsolicitacao": "30.03.2023    ",
+	"Ztmsolicitacao": "15:19:08",
+	"__metadata": {
+		"uri": "REQUESTSet(Zchave='Zchave%203',Zgcdoador='Zgcdoador%203')",
+		"type": "ZGW_QUOTAMANAGER_SRV.REQUEST"
+	},
+	"ZgcdoadorName": "MARCO ANTONIO BOIX DO NASCIMENTO",
+	"Kunn2Name": "ANTONIO LUIS ACETOZE"
+}, {
+	"Zchave": "202303235560910",
+	"Zgcdoador": "891",
+	"ZzbrAtpskp": "CP 141 PL14 ",
+	"Kunn2": "676",
+	"Uom": "TO ",
+	"BrQtdsolicitada": 30,
+	"Zqtddoada": 30,
+	"Status": "Partial",
+	"Zusrsolicitacao": "HUMBEL01       ",
+	"Zdtsolicitacao": "27.03.2023    ",
+	"Ztmsolicitacao": "16:22:24",
+	"__metadata": {
+		"uri": "REQUESTSet(Zchave='Zchave%208',Zgcdoador='Zgcdoador%208')",
+		"type": "ZGW_QUOTAMANAGER_SRV.REQUEST"
+	},
+	"ZgcdoadorName": "MARCO ANTONIO BOIX DO NASCIMENTO",
+	"Kunn2Name": "ANTONIO LUIS ACETOZE"
+}, {
+	"Zchave": "202303235560910",
+	"Zgcdoador": "8046",
+	"ZzbrAtpskp": "CP 141 PL14 ",
+	"Kunn2": "676",
+	"Uom": "TO ",
+	"BrQtdsolicitada": 32,
+	"Zqtddoada": 0,
+	"Status": "Requested",
+	"Zusrsolicitacao": "HUMBEL01       ",
+	"Zdtsolicitacao": "27.03.2023    ",
+	"Ztmsolicitacao": "16:22:24",
+	"__metadata": {
+		"uri": "REQUESTSet(Zchave='Zchave%209',Zgcdoador='Zgcdoador%209')",
+		"type": "ZGW_QUOTAMANAGER_SRV.REQUEST"
+	},
+	"ZgcdoadorName": "JESSYCA APARECIDA BRADNA FIGUEIROA",
+	"Kunn2Name": "ANTONIO LUIS ACETOZE"
+}, {
+	"Zchave": "202303235600350",
+	"Zgcdoador": "891",
+	"ZzbrAtpskp": "CP 141 PL14 ",
+	"Kunn2": "676",
+	"Uom": "TO ",
+	"BrQtdsolicitada": 10,
+	"Zqtddoada": 0,
+	"Status": "Requested",
+	"Zusrsolicitacao": "HUMBEL01       ",
+	"Zdtsolicitacao": "24.03.2023    ",
+	"Ztmsolicitacao": "10:15:08",
+	"__metadata": {
+		"uri": "REQUESTSet(Zchave='Zchave%2010',Zgcdoador='Zgcdoador%2010')",
+		"type": "ZGW_QUOTAMANAGER_SRV.REQUEST"
+	},
+	"ZgcdoadorName": "MARCO ANTONIO BOIX DO NASCIMENTO",
+	"Kunn2Name": "ANTONIO LUIS ACETOZE"
+}]
